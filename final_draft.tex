@@ -25,23 +25,6 @@ This is the final sentence in the abstract.
 
 \section{Introduction}
 
-The optional arguments of {\tt $\backslash$documentclass$\{$eptcs$\}$} are
-\begin{itemize}
-\item at most one of
-{\tt adraft},
-{\tt submission} or
-{\tt preliminary},
-\item at most one of {\tt publicdomain} or {\tt copyright},
-\item and optionally {\tt creativecommons},
-  \begin{itemize}
-  \item possibly augmented with
-    \begin{itemize}
-    \item {\tt noderivs}
-    \item or {\tt sharealike},
-    \end{itemize}
-  \item and possibly augmented with {\tt noncommercial}.
-  \end{itemize}
-\end{itemize}
 With the advent of ``blockchain'' technologies, as well as the necessity to establish a system where the trust of transactions could be offloaded to machines, we ventured into exploring how a system based on the Ethereum blockchain could accurately execute a series of smart contracts in order to validate a transaction between two entities.
 
 %By means of the style-file option
@@ -60,15 +43,11 @@ With the advent of ``blockchain'' technologies, as well as the necessity to esta
 %noncommercial purposes only.
 
 
-
-\section{Prefaces}
-
-Volume editors may create prefaces using this very template,
-with {\tt $\backslash$title$\{$Preface$\}$} and {\tt $\backslash$author$\{\}$}.
-
 \section{The blockchain and its influence on crypto-currencies}
 
-It's close to 10 years after Bitcoin was introduced by Satoshi Nakamoto. The reason crypto-currencies currently exists is due to the underlying technology made available by the blockchain. Thomas Lowenthal from Ars Technica \cite{lowenthalBitcoinEncryptedPeertopeer2011} goes onto explaining the complexities of cryptographic currencies, the concept of mining and make-work, and goes onto comparing Bitcoin against the trusty greenback which also faced hurdles when it first put into circulation.
+It's close to 10 years after Bitcoin was introduced by Satoshi Nakamoto. The reason crypto-currencies currently exist is due to the underlying technology made available by the blockchain. Thomas Lowenthal from Ars Technica \cite{lowenthalBitcoinEncryptedPeertopeer2011} goes onto explaining the complexities of cryptographic currencies, the concept of mining and make-work, and goes onto comparing Bitcoin against the trusty greenback which also faced hurdles when it was first put into circulation.
+
+The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherit to digital currencies, the double-spending problem, and the prevention of counterfeiting.
 
 \section{Bibliography}
 
@@ -139,7 +118,25 @@ within links and yield the same output as obtained by default with
 {\tt pdflatex}. 
 When invoking {\tt pdflatex}, the package {\tt breakurl} is ignored.
 
-\nocite{*}
+The optional arguments of {\tt $\backslash$documentclass$\{$eptcs$\}$} are
+\begin{itemize}
+\item at most one of
+{\tt adraft},
+{\tt submission} or
+{\tt preliminary},
+\item at most one of {\tt publicdomain} or {\tt copyright},
+\item and optionally {\tt creativecommons},
+  \begin{itemize}
+  \item possibly augmented with
+    \begin{itemize}
+    \item {\tt noderivs}
+    \item or {\tt sharealike},
+    \end{itemize}
+  \item and possibly augmented with {\tt noncommercial}.
+  \end{itemize}
+\end{itemize}
+
+
 \bibliographystyle{unsrt}
 \bibliography{biblio}
 \end{document}
