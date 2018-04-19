@@ -2,8 +2,16 @@
 %\providecommand{\event}{SOS 2007} % Name of the event you are submitting to
 \usepackage{breakurl}             % Not needed if you use pdflatex only.
 
+\usepackage{datetime}
+
+\newdate{date}{04}{18}{2018}
+
+\date{\displaydate{date}}
+
 \title{Blockchain principles applied to transaction operations on the Real Estate Market}
+
 \author{Andres Salgado
+
 \institute{International Technological University\\ San Jose, California, \underline{USA}}
 \email{salgadoandre533@students.itu.edu}
 \and
@@ -11,10 +19,20 @@ Co Authors \qquad\qquad Jorge Valdeiglesias, Kartikeya Yellayi
 \institute{International Technological University\\ San Jose, California, \underline{USA}}
 \email{\quad valdeiglesjorge744@students.itu.edu \quad\qquad yellayishiva1284@students.itu.edu}
 }
+
 \def\titlerunning{Blockchain principles applied to transaction operations on the Real Estate Market}
 \def\authorrunning{R.J. van Glabbeek, C. Author \& Y.S. Else}
+
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {images/} }
+
+\usepackage[rightcaption]{sidecap}
+
+\usepackage{wrapfig}
+
 \begin{document}
 \maketitle
+\displaydate{date}
 
 \begin{abstract}
 This is a sentence in the abstract.
@@ -31,8 +49,7 @@ With the advent of ``blockchain'' technologies, as well as the necessity to esta
 %\href{http://creativecommons.org/about/license/}{creativecommons}
 %authors equip their paper with a Creative Commons license that allows
 %everyone to copy, distribute, display, and perform their copyrighted
-%work and derivative works based upon it, but only if they give credit
-%the way you request. By invoking the additional style-file option {\tt
+%work and derivative works based upon it, but only if they give credit%the way you request. By invoking the additional style-file option {\tt
 %noderivs} you let others copy, distribute, display, and perform only
 %verbatim copies of your work, but not derivative works based upon
 %it. Alternatively, the {\tt sharealike} option allows others to
@@ -47,14 +64,30 @@ With the advent of ``blockchain'' technologies, as well as the necessity to esta
 
 It's close to 10 years after Bitcoin was introduced by Satoshi Nakamoto. The reason crypto-currencies currently exist is due to the underlying technology made available by the blockchain. Thomas Lowenthal from Ars Technica \cite{lowenthalBitcoinEncryptedPeertopeer2011} goes onto explaining the complexities of cryptographic currencies, the concept of mining and make-work, and goes onto comparing Bitcoin against the trusty greenback which also faced hurdles when it was first put into circulation.
 
-The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherit to digital currencies, the double-spending problem, and the prevention of counterfeiting.
+The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherit to digital currencies, the double-spending problem, and the prevention of counterfeiting\cite{noauthor_bitcoin}.
+On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} spoke about "Developing Blockchain Software".  On his talk he mentions key characteristics of "the blockchain". Section 2.1 goes onto describing such characteristics.   
+
+\subsection{What is a blockchain and what is one good for?}
+\begin{itemize}
+\item Blockchains record state and history
+\item State is modified by transactions
+\item Everyone eventually agrees on the transactions
+\item Can be used to transfer tokens
+\end{itemize}
+
+Based on this list, most of us would conclude that the blockchain is merely a database, but in actuality, the blockchain -according to Schwarz\cite{cppconCppCon2016David}- manages the double-spending problem.
+\subsection{What the blockchain does for bitcoin}
+
+\includegraphics{bitcoin-blockchain-bloomberg}
+
+Besides solving the issue of how to allow for a feasible digital currency, the blockchain has opened the door towards the development of new uses of the technology, that do not necessarily address the exchange of assets in a digital manner.
+
 
 \section{Bibliography}
 
 We request that you use
 \href{http://www.cse.unsw.edu.au/~rvg/EPTCS/eptcs.bst}
-{\tt $\backslash$bibliographystyle$\{$eptcs$\}$}
-\cite{vidal_tokenizing_2017}. Compared to the original {\LaTeX}
+{\tt $\backslash$bibliographystyle$\{$eptcs$\}$}. Compared to the original {\LaTeX}
 {\tt $\backslash$biblio\-graphystyle$\{$plain$\}$},
 it ignores the field {\tt month}, and uses the extra
 bibtex fields {\tt eid}, {\tt doi}, {\tt ee} and {\tt url}.
