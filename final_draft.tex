@@ -1,17 +1,17 @@
 \documentclass[submission,copyright,creativecommons]{eptcs}
 %\providecommand{\event}{SOS 2007} % Name of the event you are submitting to
 \usepackage{breakurl}             % Not needed if you use pdflatex only.
-
 \usepackage{datetime}
-
 \newdate{date}{04}{18}{2018}
-
 \date{\displaydate{date}}
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {images/} }
 
+\usepackage[rightcaption]{sidecap}
+
+\usepackage{wrapfig}
 \title{Blockchain principles applied to transaction operations on the Real Estate Market}
-
 \author{Andres Salgado
-
 \institute{International Technological University\\ San Jose, California, \underline{USA}}
 \email{salgadoandre533@students.itu.edu}
 \and
@@ -22,13 +22,6 @@ Co Authors \qquad\qquad Jorge Valdeiglesias, Kartikeya Yellayi
 
 \def\titlerunning{Blockchain principles applied to transaction operations on the Real Estate Market}
 \def\authorrunning{R.J. van Glabbeek, C. Author \& Y.S. Else}
-
-\usepackage{graphicx} %package to manage images
-\graphicspath{ {images/} }
-
-\usepackage[rightcaption]{sidecap}
-
-\usepackage{wrapfig}
 
 \begin{document}
 \maketitle
@@ -76,11 +69,19 @@ On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} spoke about "Developing
 \end{itemize}
 
 Based on this list, most of us would conclude that the blockchain is merely a database, but in actuality, the blockchain -according to Schwarz\cite{cppconCppCon2016David}- manages the double-spending problem.
+
 \subsection{What the blockchain does for bitcoin}
 
-\includegraphics{bitcoin-blockchain-bloomberg}
+\begin{figure}[h]
+    \centering
+    \label{fig:my_label}
+    \includegraphics[width=5in]{bitcoin-blockchain-bloomberg}
+     \caption{Image Source: BloombergQuicktake}
+\end{figure}
 
-Besides solving the issue of how to allow for a feasible digital currency, the blockchain has opened the door towards the development of new uses of the technology, that do not necessarily address the exchange of assets in a digital manner.
+
+\section{Beyond Bitcoin (other industries and its use)}
+Besides solving the issue of how to allow for a feasible digital currency, the blockchain has opened the door towards the development of new uses of the technology, that do not necessarily address the exchange of assets in a digital manner.  This exposure has allowed millions of dollars to be poured into research and development of proper blockchain applications in a variety of fields with distinct uses and outcomes.
 
 
 \section{Bibliography}
@@ -172,4 +173,5 @@ The optional arguments of {\tt $\backslash$documentclass$\{$eptcs$\}$} are
 
 \bibliographystyle{unsrt}
 \bibliography{biblio}
+%\listoffigures
 \end{document}
