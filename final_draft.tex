@@ -2,7 +2,7 @@
 \usepackage{breakurl}             % Not needed if you use pdflatex only.
 \usepackage{datetime}
 \newdate{date}{04}{18}{2018}
-\date{\displaydate{date}}
+%\date{\displaydate{date}}
 \usepackage{graphicx} %package to manage images
 \graphicspath{ {images/} }
 
@@ -24,7 +24,7 @@ Co Authors \qquad\qquad Jorge Valdeiglesias, Kartikeya Yellayi
 
 \begin{document}
 \maketitle
-\displaydate{date}
+\displaydate{today}
 
 \begin{abstract}
 This is a sentence in the abstract.
@@ -95,6 +95,8 @@ Many experts conclude that \textit{Bitcoin} has done to the blockchain what e-ma
 
 Due to the advantages that \textit{Ethereum} offers we chose to dig a little deeper into finding a a set of tools that would allow our app to thrive towards developing a self-serving real estate property exchange tool.
 
+\subsection{RSA silently working on the background}
+Szabo puts great emphasis on explaining the background of RSA\cite{milanov2009rsa} and its critical role on smart contracts.  The ideal metaphor uses two subjects -in this case Alice and Bob- to explain how public cryptography's mathematical intricacies work to create a pair of \textit{keys} in this case a public one and private one that serve as a cryptography based exchange of messages.  The importance of the use of RSA based encryption is directly related to the underpinning of the principles of contract design\footnote{Szabo goes on to explaining these principles on the \textit{Some Basic Principles of Contract Design} subsection of \cite{NickSzaboSmart}} and are rooted on common law, economic theory, and contractual conditions, which in turn derive the principles of observability, verifiability, privity, and enforceability.
 
 \subsection{Smart Contract definition}
 An abridged definition of the smart contract provided by the \textit{Solidity} documentation page goes as follows:
