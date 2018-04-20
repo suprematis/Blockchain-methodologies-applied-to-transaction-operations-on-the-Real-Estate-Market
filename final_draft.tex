@@ -98,6 +98,8 @@ Due to the advantages that \textit{Ethereum} offers we chose to dig a little dee
 \subsection{RSA silently working on the background}
 Szabo puts great emphasis on explaining the background of RSA\cite{milanov2009rsa} and its critical role on smart contracts.  The ideal metaphor uses two subjects -in this case Alice and Bob- to explain how public cryptography's mathematical intricacies work to create a pair of \textit{keys} in this case a public one and private one that serve as a cryptography based exchange of messages.  The importance of the use of RSA based encryption is directly related to the underpinning of the principles of contract design\footnote{Szabo goes on to explaining these principles on the \textit{Some Basic Principles of Contract Design} subsection of \cite{NickSzaboSmart}} and are rooted on common law, economic theory, and contractual conditions, which in turn derive the principles of observability, verifiability, privity, and enforceability.
 
+
+
 \subsection{Smart Contract definition}
 An abridged definition of the smart contract provided by the \textit{Solidity} documentation page goes as follows:
 \begin{quote}
@@ -112,6 +114,27 @@ In a strict technical sense, the smart contract is programmable to comply with a
     \includegraphics[width=5in]{How-Smart-Contracts-Works-1.png}
      \caption{Image Source: Blockgeeks}
 \end{figure}
+
+\subsection{Zeroing on Ethereum}
+\textit{Ethereum's} versatility, served as the perfect platform to deploy a generalized decentralized app seeking to solve smart contract transactions.  Dr. Gavin Wood in his introduction to \textit{ETHEREUM: A SECURE DECENTRALISED GENERALISED TRANSACTION LEDGER} summarizes the objectives of building \textit{"a trustful object messaging compute framework."}\cite{wood2014ethereum}Parting from these principles the platform choice selected for accomplishing the objective of our thesis revolves around the use of a framework grounded on \textit{Ethereum}. 
+
+Research concluded that the chosen framework needed to have current front-end and back-end technologies, as well as to show signs of current community engagement and active development.  
+
+\section{Truffle as a development platform}
+\textit{Truffle} is a Javascript based development framework\cite{TruffleDocumentation}. \textit{Truffle} offers the following advantages as a tool:
+\begin{itemize}
+\item Built-in smart contract compilation, linking, deployment and binary management.
+\item Automated contract testing for rapid development.
+\item Scriptable, extensible deployment & migrations framework.
+\item Network management for deploying to any number of public & private networks.
+\item Package management with EthPM & NPM, using the ERC190 standard.
+\item Interactive console for direct contract communication.
+\item Configurable build pipeline with support for tight integration.
+\item External script runner that executes scripts within a Truffle environment.
+\end{itemize}
+
+In order to deploy and test the validity and accuracy of the contracts written within our coding environment, it was necessary to write the contracts to a blockchain.  The creators of \textit{Truffle} simultaneously develop and maintain a separate component named \textit{Ganache}.  \textit{Ganache}\cite{Ganache} is a personal deployable test Ethereum network capable of accepting commands, with a GUI interface that allows users to inspect and control how the chain operates.  It is a requirement for Ganache to run in the background in order to properly test the validity and actionability of any given contract code written in the application.
+
 
 \newpage
 \section{Bibliography}
