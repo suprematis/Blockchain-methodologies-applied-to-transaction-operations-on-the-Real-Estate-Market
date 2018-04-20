@@ -1,5 +1,4 @@
 \documentclass[submission,copyright,creativecommons]{eptcs}
-%\providecommand{\event}{SOS 2007} % Name of the event you are submitting to
 \usepackage{breakurl}             % Not needed if you use pdflatex only.
 \usepackage{datetime}
 \newdate{date}{04}{18}{2018}
@@ -21,7 +20,7 @@ Co Authors \qquad\qquad Jorge Valdeiglesias, Kartikeya Yellayi
 }
 
 \def\titlerunning{Blockchain principles applied to transaction operations on the Real Estate Market}
-\def\authorrunning{R.J. van Glabbeek, C. Author \& Y.S. Else}
+\def\authorrunning{Andres Salgado, C. Author \& Jorge Valdeiglesias, Kartikeya Yellayi}
 
 \begin{document}
 \maketitle
@@ -57,8 +56,8 @@ With the advent of ``blockchain'' technologies, as well as the necessity to esta
 
 It's close to 10 years after Bitcoin was introduced by Satoshi Nakamoto. The reason crypto-currencies currently exist is due to the underlying technology made available by the blockchain. Thomas Lowenthal from Ars Technica \cite{lowenthalBitcoinEncryptedPeertopeer2011} goes onto explaining the complexities of cryptographic currencies, the concept of mining and make-work, and goes onto comparing Bitcoin against the trusty greenback which also faced hurdles when it was first put into circulation.
 
-The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherit to digital currencies, the double-spending problem, and the prevention of counterfeiting\cite{noauthor_bitcoin}.
-On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} spoke about "Developing Blockchain Software".  On his talk he mentions key characteristics of "the blockchain". Section 2.1 goes onto describing such characteristics.   
+The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherent to digital currencies, the double-spending problem, and the prevention of counterfeiting\cite{noauthor_bitcoin}.
+On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} at cppcon 2016 spoke about "Developing Blockchain Software".  On his talk he mentions key characteristics of "the blockchain". Section 2.1 goes onto describing such characteristics.   
 
 \subsection{What is a blockchain and what is one good for?}
 \begin{itemize}
@@ -80,14 +79,32 @@ Figure 1 describes how the blockchain validates bitcoin as cryptocurrency system
      \caption{Image Source: BloombergQuicktake}
 \end{figure}.
 
+\subsection{Principal advantages of cryptocurrencies}
+Not only does Bitcoin comply with providing security to users that require to exchange currency within the system, but by December 2017\cite{MostImportantCryptocurrencies} the 6 most important cryptocurrencies in world, among those \textit{Ethereum} which is currently the second cryptocurrency based on market capitalization \textbf{(41.4 billion)}, manage to .
 
 \section{Beyond Bitcoin (other industries and its use)}
 Besides solving the issue of how to allow for a feasible digital currency, the blockchain has opened the door towards the development of new uses of the technology, that do not necessarily address the exchange of assets in a digital manner.  This exposure has allowed millions of dollars to be poured into research and development of proper blockchain applications in a variety of fields with distinct uses and outcomes.
 One of the business that seems to be benefiting the most from this investments is the logistics business. Many companies are involved in the process of carrying goods. Most importantly, because there are several actors involved in such process, a delay in shipment can prove to be catastrophic to huge shipments.  
 
-Currently the majority of companies that engage in gathering data to make business decisions use different types of database systems in order to store, query and build statistical model out of collected data.  When the interaction with that data doesn't require sharing such information, companies are equipped to process it, but when two or more entities\cite{BlockchainGoesCryptoCurrency2016} need to share such data, it is often complicated to achieve a consensus on how such exchange should be handled.\footnote{Olga Kharif on her article "Blockchain Goes Beyond Crypto-Currency" explains how companies in Finland, Sweden, Estonia and Latvia are beginning to use a blockchain system in order to share information. }
+Currently the majority of companies that engage in gathering data to make business decisions use different types of database systems in order to store, query and build statistical models out of collected data.  When the interaction with that data doesn't require sharing such information, companies are equipped to process it, but when two or more entities\cite{BlockchainGoesCryptoCurrency2016} need to share such data, it is often complicated to achieve a consensus on how such exchange should be handled.\footnote{Olga Kharif on her article "Blockchain Goes Beyond Crypto-Currency" explains how companies in Finland, Sweden, Estonia and Latvia are beginning to use a blockchain system in order to share information.}
 
+\section{Ethereum and smart contracts}
+All experts conclude that \textit{Bitcoin} has done to the blockchain what e-mail did to the internet.  To further this notion of what the blockchain is capable of, it can be said that \textit{Bitcoin} is a digital currency using the blockchain as a vehicle to function digitally.  There are certain tasks that \textit{Bitcoin} can perform, but they are limited compared to that of the scope of what \textit{Ethereum} does.  One of the main advantages of \textit{Ethereum} is that it applies the same principles that the blockchain uses on \textit{Bitcoin} with the added functionality of smart contracts\footnote{Smart contracts are currently handled by the Solidity language.  Further information about solidity can be found at the development website \url{https://solidity.readthedocs.io/en/develop/#}\cite{SoliditySolidity23}} as a method to exchange any item of value, this being money, content, shares or property.
+\subsection{Smart Contract definition}
+An abridged definition of the smart contract provided by the \textit{Solidity} documentation page goes as follows:
+\begin{quote}
+    A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.\cite{IntroductionSmartContracts}
+\end{quote}
+In a strict technical sense, the smart contract is programmable to comply with any set of defined conditions.  Because the smart contract is rooted in code, any prerequisite that was celebrated between two parties on a traditional contract, can have it's clauses translated into code, therefore allowing for any legal conditions to exist digitally.
+\textit{Figure 2} illustrates how a smart contract would execute the sale of a property.  In this case two parties, the buyer and the seller, \textbf{exchange} an asset through a contract that supports the digitizing of a land deed and the subsequent digitizing of the currency, allowing for an ordered settlement and thus cementing the idea that the ownership of the asset was properly transfered to the new owner.
+\begin{figure}[h]
+    \centering
+    \label{fig:my_label}
+    \includegraphics[width=5in]{bitcoin-blockchain-bloomberg}
+     \caption{Image Source: BloombergQuicktake}
+\end{figure}.
 
+\newpage
 \section{Bibliography}
 
 
