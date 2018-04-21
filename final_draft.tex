@@ -82,7 +82,7 @@ Figure 1 describes how the blockchain validates bitcoin as cryptocurrency system
 \end{figure}.
 
 \subsection{Principal advantages of cryptocurrencies}
-Not only does Bitcoin comply with providing security to users that require to exchange currency within the system, but by December 2017\cite{MostImportantCryptocurrencies} the 6 most important cryptocurrencies in world, among those \textit{Ethereum} which is currently the second cryptocurrency based on market capitalization \textbf{(41.4 billion)}, manage to .
+Not only does Bitcoin comply with providing security to users that require to exchange currency within the system, but by December 2017\cite{MostImportantCryptocurrencies} the 6 most important cryptocurrencies in world, among those \textit{Ethereum} which is currently the second cryptocurrency based on market capitalization \textbf{(41.4 billion)}, manage to continue on a growth path, with its value and market capitalization following an upwards trend, a sign of how confident the public feel about cryptocurrencies as a method to exchange value.
 
 \section{Beyond Bitcoin (other industries and its use)}
 Besides solving the issue of how to allow for a feasible digital currency, the blockchain has opened the door towards the development of new uses of the technology, that do not necessarily address the exchange of assets in a digital manner.  This exposure has allowed millions of dollars to be poured into research and development of proper blockchain applications in a variety of fields with distinct uses and outcomes.
@@ -99,8 +99,6 @@ Due to the advantages that \textit{Ethereum} offers we chose to dig a little dee
 
 \subsection{RSA silently working on the background}
 Szabo puts great emphasis on explaining the background of RSA\cite{milanov2009rsa} and its critical role on smart contracts.  The ideal metaphor uses two subjects -in this case Alice and Bob- to explain how public cryptography's mathematical intricacies work to create a pair of \textit{keys} in this case a public one and private one that serve as a cryptography based exchange of messages.  The importance of the use of RSA based encryption is directly related to the underpinning of the principles of contract design\footnote{Szabo goes on to explaining these principles on the \textit{Some Basic Principles of Contract Design} subsection of \cite{NickSzaboSmart}} and are rooted on common law, economic theory, and contractual conditions, which in turn derive the principles of observability, verifiability, privity, and enforceability.
-
-
 
 \subsection{Smart Contract definition}
 An abridged definition of the smart contract provided by the \textit{Solidity} documentation page goes as follows:
@@ -151,8 +149,12 @@ The following software is required to run the experimental app:
 \end{itemize}
 \end{multicols}
 
+
+\begin{multicols}{2}
+[
 \section{App usage scenarios}
 On the current development stage the following changes of state are supported:
+]
 \begin{itemize}
 \item Contract deployment
 \item Token transfer
@@ -160,11 +162,7 @@ On the current development stage the following changes of state are supported:
 \item Offer submission
 \item Party acceptance
 \end{itemize}
-
-
-
-
-
+\end{multicols}
 
 
 \subsection{Contract Deployment}
@@ -186,15 +184,22 @@ npm install -g truffle
 \caption{npm command}
 \end{figure}
 
-After issuing that command we 
+After this step it is required before any new \textit{truffle} operation to have a functioning test blockchain in place.  \textit{Ganache} is the tool of choice.  It comes in two flavors, as a desktop application or as a command-line tool.  For current test purposes the user will download the appropriate desktop application compatible with the running operating system. 
+
+Figure 3 shows an account overview after successful \textit{Ganache} installation.\footnote{An extensive guide on how to install and deploy \textit{Ganache} is available at the following address \url{http://truffleframework.com/docs/ganache/using}}
+\begin{figure}[h]
+    \centering
+    \label{fig:my_label}
+    \includegraphics[width=5in]{ganache_accounts.png}
+     \caption{Image Source: CONSENSYS 2017}
+\end{figure}.
+
+
 
 \newpage
-\section{Bibliography}
-
-
-
 
 \bibliographystyle{acm}
+\begin{multicols}{2}
 \bibliography{biblio}
-%\listoffigures
+\end{multicols}
 \end{document}
