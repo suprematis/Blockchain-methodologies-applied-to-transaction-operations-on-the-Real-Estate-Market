@@ -7,6 +7,8 @@
 \graphicspath{ {images/} }
 
 \usepackage[rightcaption]{sidecap}
+\usepackage{tcolorbox}
+\usepackage{multicol}
 
 \usepackage{wrapfig}
 \title{Blockchain principles applied to transaction operations on the Real Estate Market}
@@ -56,7 +58,7 @@ With the advent of ``blockchain'' technologies, as well as the necessity to esta
 
 It's close to 10 years after Bitcoin was introduced by Satoshi Nakamoto. The reason crypto-currencies currently exist is due to the underlying technology made available by the blockchain. Thomas Lowenthal from Ars Technica \cite{lowenthalBitcoinEncryptedPeertopeer2011} goes onto explaining the complexities of cryptographic currencies, the concept of mining and make-work, and goes onto comparing Bitcoin against the trusty greenback which also faced hurdles when it was first put into circulation.
 
-The primary reason why cryptocurrencies are being adopted by a sizable portion of the population is due to the engineering concept behind the implementation of the blockchain to solve two basic problems inherent to digital currencies, the double-spending problem, and the prevention of counterfeiting\cite{noauthor_bitcoin}.
+No currency system is perfect. One of the caveats of implementing a digital currency is the problem of double-spending.  Since there are no regulating agents (in this case governments or private entities) that can verify the authenticity of a given cryptocurrency, there has to be an engineered mechanism that can protect users from issues related to double spending and the use of counterfeit instruments. The blockchain solves these two basic problems inherent to its digital nature by applying the concepts of digital signatures and peer-to-peer networks.\cite{nakamotoBitcoinPeertoPeerElectronic}\cite{noauthor_bitcoin}.
 On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} at cppcon 2016 spoke about "Developing Blockchain Software".  On his talk he mentions key characteristics of "the blockchain". Section 2.1 goes onto describing such characteristics.   
 
 \subsection{What is a blockchain and what is one good for?}
@@ -64,7 +66,7 @@ On cppcon 2016 David Schwarz\cite{cppconCppCon2016David} at cppcon 2016 spoke ab
 \item Blockchains record state and history
 \item State is modified by transactions
 \item Everyone eventually agrees on the transactions
-\item Can be used to transfer tokens
+\item Can be used to transfer tokens and coins
 \end{itemize}
 
 Based on this list, most of us would conclude that the blockchain is merely a database, but in actuality, the blockchain -according to Schwarz\cite{cppconCppCon2016David}- manages the double-spending problem.
@@ -119,9 +121,11 @@ In a strict technical sense, the smart contract is programmable to comply with a
 \textit{Ethereum's} versatility, served as the perfect platform to deploy a generalized decentralized app seeking to solve smart contract transactions.  Dr. Gavin Wood in his introduction to \textit{ETHEREUM: A SECURE DECENTRALISED GENERALISED TRANSACTION LEDGER} summarizes the objectives of building \textit{"a trustful object messaging compute framework."}\cite{wood2014ethereum}Parting from these principles the platform choice selected for accomplishing the objective of our thesis revolves around the use of a framework grounded on \textit{Ethereum}. 
 
 Research concluded that the chosen framework needed to have current front-end and back-end technologies, as well as to show signs of current community engagement and active development.  
-
+\begin{multicols}{2}
+[
 \section{Truffle as a development platform}
 \textit{Truffle} is a Javascript based development framework\cite{TruffleDocumentation}. \textit{Truffle} offers the following advantages as a tool:
+]
 \begin{itemize}
 \item Built-in smart contract compilation, linking, deployment and binary management.
 \item Automated contract testing for rapid development.
@@ -132,9 +136,57 @@ Research concluded that the chosen framework needed to have current front-end an
 \item Configurable build pipeline with support for tight integration.
 \item External script runner that executes scripts within a Truffle environment.
 \end{itemize}
-
+\end{multicols}
 In order to deploy and test the validity and accuracy of the contracts written within our coding environment, it was necessary to write the contracts to a blockchain.  The creators of \textit{Truffle} simultaneously develop and maintain a separate component named \textit{Ganache}.  \textit{Ganache}\cite{Ganache} is a personal deployable test Ethereum network capable of accepting commands, with a GUI interface that allows users to inspect and control how the chain operates.  It is a requirement for Ganache to run in the background in order to properly test the validity and actionability of any given contract code written in the application.
+\begin{multicols}{2}
+[
+\section{App requirements (what to install)}
+The following software is required to run the experimental app:
+]
+\begin{itemize}
+\item Truffle
+\item Ganache
+\item Node.js
+\item MongoDB
+\end{itemize}
+\end{multicols}
 
+\section{App usage scenarios}
+On the current development stage the following changes of state are supported:
+\begin{itemize}
+\item Contract deployment
+\item Token transfer
+\item Property publishing
+\item Offer submission
+\item Party acceptance
+\end{itemize}
+
+
+
+
+
+
+
+\subsection{Contract Deployment}
+The contract deployment stage is intimately related to the correct execution of the \textit{Truffle} environment.  The following requirements should be satisfied prior to running the commands shown in \textit{Figure 3}
+\begin{itemize}
+\item Windows, Linux or Mac OS X
+\item NodeJS 5.0+ recommended.
+\end{itemize}
+
+\begin{figure}[h]
+\begin{tcolorbox}
+
+\begin{align}
+\begin{verbatim}
+npm install -g truffle
+\end{verbatim}
+\end{align}
+\end{tcolorbox}
+\caption{npm command}
+\end{figure}
+
+After issuing that command we 
 
 \newpage
 \section{Bibliography}
